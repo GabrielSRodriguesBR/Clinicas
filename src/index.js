@@ -64,5 +64,5 @@ app.use(routes);
 
 
 
-module.exports = app;
-//app.listen(2078);
+
+app.listen(2078);
