@@ -1,0 +1,71 @@
+<%- include('../Layout/LayoutHeader') %>
+
+
+
+    <div class="col-md-12" style="display: flex;">
+        <div class="col-md-6" style="margin: auto; width: 100%;">
+            <form action="/User/edit" method="POST">
+                <input class="form-control" type="hidden" name="id" , id="id" value="<%= User.id %>" required>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="label-form" for="name">Nome</label>
+                        <input class="form-control" type="text" name="name" , id="name" value="<%= User.name %>" required>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="label-form" for="cpf">CPF</label>
+                                <input class="form-control" type="number" name="cpf" id="cpf" value="<%= User.name %>">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="label-form" for="email">Email</label>
+                                <input class="form-control" type="text" name="email" id="email" value="<%= User.name %>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="label-form" for="phone">Telefone</label>
+                                <input class="form-control" type="number" name="phone" id="phone" value="<%= User.name %>">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="usertype">Tipo de Usuário</label>
+                                <select class="form-control" id="usertype" name="usertype">
+                                    <option value="0">Funcionário</option>
+                                    <option value="1">Médico</option>
+                                    <option value="2">Paciente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             
+
+
+                <div class="col-md-12">
+                    
+                    <button class="btn btn-sm btn-info" type="submit"><i class="fas fa-plus"></i> Salvar Usuário</button>
+
+                </div>
+                <%= errorMessage %>
+            </form>
+        </div>
+
+    </div>
+
+
+    <%- include('../Layout/LayoutFooter') %>

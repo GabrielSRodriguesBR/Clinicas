@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="/src/content/jquery/jquery-3.6.0.min.js"></script>
+  <script src="/src/content/bootstrap/popper.min.js"></script>
+  <script src="/src/content/bootstrap/bootstrap.min.js"></script>
+  <script src="/src/content/bootbox/bootbox.min.js"></script>
+  <script src="/src/content/js/app.js"></script>
+
+  <link href="/src/content/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/src/content/fontawesome/css/solid.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/content/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/src/content/css/app.css" />
+  <link href="/src/content/fonts/Roboto/">
+
+
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="/" style="display: flex; align-items: center;">
+        <img src="/src/public/cruz-vermelha.png" style=" width: 4rem ">
+        <span
+          style=" color: #fff; padding:0 0.6rem; border-left: 1px solid #fff; font-size: 2.2rem; margin: 0 0.5rem;">Clínica</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+      <div class="collapse navbar-collapse bg-dark" id="navContent">
+
+        <ul class="navbar-nav navbar-right ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user"></i> <%- user.name %></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/Logout"><i class="fas fa-door-open"></i> Sair</a>
+          </li>
+        </ul>
+     
+      </div>
+
+    </nav>
+
+    <div class="col-md-12 col-sm-6 col-xs-6" id="app-body">

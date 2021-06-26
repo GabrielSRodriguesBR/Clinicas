@@ -1,0 +1,39 @@
+<%- include('../Layout/LayoutHeader') %>
+
+    <div id="home-container">
+        <div class="menu-container">
+
+            <div class="menu-cards">
+
+              
+                <div class="menu-option" id="con-exame">
+                   
+                    <div class="card-option">
+                        <div class="card-text"> Consulta de Exames</div>
+                    </div>
+
+                </div>
+                <% if(user.usertype == 0 || user.usertype == 1){ %>
+                <div class="menu-option" id="lan-exame">
+                    <div class="card-option">
+                        <div class="card-text"> Lançamento de Exames</div>
+                    </div>
+                </div>
+                <% } %>
+
+                <% if(user.usertype == 0 || user.usertype == 1){ %>
+                <div class="menu-option" id="cad-usuario">
+                    <div class="card-option">
+                        <div class="card-text"> Cadastro de Usuário</div>
+                    </div>
+
+                </div>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <%- include('../Layout/LayoutFooter') %>

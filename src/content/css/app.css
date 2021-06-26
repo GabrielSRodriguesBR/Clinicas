@@ -1,0 +1,123 @@
+body{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #5a5a5a;
+    color: #fff;
+}
+
+.bg-dark{
+    background: #423e3e !important;
+    color: #fff !important;
+}
+
+#navContent ul li a{
+    color: #fff !important;
+    font-size: 12px;
+}
+
+#navContent .dropdown .dropdown-menu{
+    background: #423e3e !important;
+    color: #fff !important;
+}
+
+#navContent .dropdown .dropdown-menu a:hover{
+    background: #fff !important;
+    color: #423e3e !important;
+}
+
+.navbar-brand img{
+    width: 4rem !important;
+}
+
+.navbar-brand span{
+    color: #fff !important;
+}
+
+.card-option{
+    height: 11rem;
+    margin: 1rem;
+    background: #dedede;
+    border-radius: 0.7rem;
+}
+
+.menu-option{
+    width: 33.33%;
+    cursor: pointer;
+}
+
+#app-body{
+    margin: 1rem 0;
+    
+   
+}
+
+#home-container{
+    margin: auto;
+    
+}
+
+.menu-container{
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+}
+
+.menu-cards{
+    margin: auto;
+    display: inline-flex;
+    width: 100%;
+}
+
+#con-exame .card-option{
+    background-image: url('/src/public/images/consulta.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    border-radius: 0.7rem;
+}
+
+#lan-exame .card-option{
+    background-image: url('/src/public/images/lancar.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    border-radius: 0.7rem;
+}
+
+#cad-usuario .card-option{
+    background-image: url('/src/public/images/user.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    border-radius: 0.7rem;
+}
+
+.card-text{
+    z-index: 2;
+    color: #000000;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+    font-weight: bold;
+    width: 100%;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    background-color: rgba(208,22,22,0.23);
+    transition: background-color linear 0.3s;
+}
+
+.card-text:hover{
+    background-color: rgba(0,0,0,0.78);
+    text-shadow: none;
+    color: #f1eaea;
+}
+
+.form-search{
+    padding: 2rem 01rem;
+    background: #423e3e;
+    border-radius: 1rem;
+}

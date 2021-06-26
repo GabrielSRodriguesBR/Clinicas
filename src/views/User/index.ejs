@@ -1,0 +1,100 @@
+<%- include('../Layout/LayoutHeader') %>
+
+
+
+<div class="col-md-12 form-search">
+
+    <form action="/User/Search" id="searchForm" name="searchForm" method="POST">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="label-form" for="name">Nome</label>
+                    <input class="form-control" type="text" name="name", id="name", value="<%- search.name  %>">
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="label-form" for="cpf">CPF</label>
+                    <input class="form-control" type="text" name="cpf", id="cpf", value="<%- search.cpf  %>">
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="label-form" for="email">Email</label>
+                    <input class="form-control" type="text" name="email", id="email", value="<%- search.email  %>">
+                </div>
+            </div>
+        </div>
+     
+        <button class="btn btn-sm btn-info" type="submit"><i class="fas fa-search"></i> Pesquisar</button>
+    
+    
+    </form>
+
+
+</div>
+
+<div class="col-md-12" style="margin-top: 2rem;">
+    <a class="btn btn-sm btn-success" href="/User/create" ><i class="fas fa-plus"></i> Criar Usuário</a>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Usuário</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th></th>
+                <!-- <th></th> -->
+                
+            </tr>
+        </thead>
+        <tbody>
+            <% UserList.forEach(function(user) { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.username %>
+                    </td>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.email ?? "-" %>
+                    </td>
+                    <td>
+                        <%= user.cpf ?? "-" %>
+                    </td>
+                    <td>
+                        <%= user.phone ?? "-" %>
+                    </td>
+
+                    <td>
+                        <% if(user.usertype == 0) { %>
+                                Funcionário/ Admin
+
+                        <% } else if(user.usertype == 1) {%>
+                                Médico
+                        <% } else if(user.usertype == 2){ %>
+                                Paciente
+                        <% } %>
+                    </td>
+                    <td><a class="btn btn-danger btn-sm" href="/User/edit/<%=user.id%>"> <i class="fas fa-edit"></i> Editar</a></td>
+                </tr>
+
+                <% }); %>
+        </tbody>
+    </table>
+
+
+</div>
+
+   
+
+
+    <%- include('../Layout/LayoutFooter') %>
