@@ -2,6 +2,7 @@
 const express = require('express');
 const db = require('./database');
 const User = require('./models/User');
+const Exam = require('./models/Exam');
 const { hash} = require ('bcryptjs');
 const routes = require('./routes');
 const path = require('path');
@@ -44,7 +45,6 @@ app.use(routes);
 (async () => {
     try {
       await db.sync();
-
       var checkUser =  await User.findByPk(1);
       if(checkUser == null){
         await User.create({
